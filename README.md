@@ -130,6 +130,18 @@ Enable debug logs by running this in the developer console.
 
 and then reload.
 
+
+## The Linux Way
+
+    dd if=/dev/zero bs=1000 count=20000000 | zip surprise.zip -
+
+or
+
+    dd if=/dev/zero bs=1000 count=20000000 | gzip > surprise.gz
+
+Creates around `19 MB` file that extracts to around `20 GB` file. Keep increasing the count and enjoy!
+
+
 ## Test
 
     npm test
