@@ -9,7 +9,7 @@
 
 [Zip bomb](https://en.wikipedia.org/wiki/Zip_bomb) for Browser and Node.js.
 
-> [⚡️ Live demo here](https://harshjv.github.io/zip-bomb-demo/)
+> [⚡️ Live demo here](https://cdn.rawgit.com/harshjv/zip-bomb/master/example/index.html)
 
 ## Installation
 
@@ -110,6 +110,7 @@ Same as `zipBomb.createDataURL(bufferMultiplier, level)`
 
 > Embed bundled file into an HTML page and click on the link to download generated zip bomb!
 
+Or open [/example/index.html](/example/index.html) folder in browser.
 
 ## Debug
 
