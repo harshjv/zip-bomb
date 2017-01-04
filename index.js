@@ -21,15 +21,20 @@ const zipToBuffer = (zip) => zip.generateAsync({ compression: 'DEFLATE', type: '
 
 const createBuffer = (zeroBufferSize, bufferLevel, zipLevel) => {
   let rootZipFile = new JSZip()
+
+  if (typeof zeroBufferSize !== 'number') {
+    throw new Error('Buffer multiplier should be a number')
+  }
+
   rootZipFile.file('zero.txt', prepareZeroBuffer(zeroBufferSize, bufferLevel))
 
   return zipToBuffer(rootZipFile)
           .then((rootBuffer) => {
-            if (typeof zeroBufferSize === 'number') {
+            if (typeof bufferLevel !== 'number') {
               throw new Error('Buffer multiplier should be a number')
             }
 
-            if (typeof level === 'number') {
+            if (typeof zipLevel !== 'number') {
               throw new Error('Level should be a number')
             }
 
