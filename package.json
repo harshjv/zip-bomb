@@ -23,7 +23,8 @@
   },
   "scripts": {
     "test": "standard",
-    "prepublish": "browserify example/browser.js > example/bundle.js"
+    "build-example": "browserify example/browser.js > example/bundle.js",
+    "prepublish": "npm run build-example"
   },
   "repository": {
     "type": "git",
