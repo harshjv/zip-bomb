@@ -7,6 +7,8 @@
 [npm-image]: https://img.shields.io/npm/v/zip-bomb.svg
 [npm-url]: https://npmjs.org/package/zip-bomb
 
+> **CAUTION** THIS IS JUST AN EXPERIMENT. USE THIS AT YOUR OWN RISK. READ MORE ABOUT ZIP BOMB [HERE](https://en.wikipedia.org/wiki/Zip_bomb).
+
 [Zip bomb](https://en.wikipedia.org/wiki/Zip_bomb) for Browser and Node.js.
 
 > [⚡️ Live demo here](https://rawgit.com/harshjv/zip-bomb/master/example/index.html)
