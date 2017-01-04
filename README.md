@@ -9,13 +9,13 @@
 
 [Zip bomb](https://en.wikipedia.org/wiki/Zip_bomb) for Browser and Node.js.
 
-> [⚡️ Live demo here](https://harshjv.github.io/zip-bomb/demo/)
+> [⚡️ Live demo here](https://harshjv.github.io/zip-bomb-demo/)
 
 ## Installation
 
     npm install zip-bomb
 
-Checkout [API](#API) usage.
+Checkout [API](#api) usage.
 
 
 ## Command line
@@ -74,7 +74,7 @@ Same as `zipBomb.createDataURL(bufferMultiplier, level)`
 
 ## Usage
 
-### In node.js
+### In Node.js
 
     const fs = require('fs')
     const zb = require('zip-bomb')
@@ -110,6 +110,22 @@ Same as `zipBomb.createDataURL(bufferMultiplier, level)`
 
 > Embed bundled file into an HTML page and click on the link to download generated zip bomb!
 
+
+## Debug
+
+### In Node.js
+
+Enable debug logs by setting the `DEBUG` environment variable.
+
+    DEBUG=zip-bomb*
+
+### In Browser
+
+Enable debug logs by running this in the developer console.
+
+    localStorage.debug = 'zip-bomb*'
+
+and then reload.
 
 ## Test
 
