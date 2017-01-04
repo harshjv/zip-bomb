@@ -1,0 +1,47 @@
+{
+  "name": "zip-bomb",
+  "version": "1.0.0",
+  "description": "Zip bomb for Browser and Node.js.",
+  "bin": "bin/zip-bomb",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "adm-zip": "^0.4.7",
+    "bluebird": "^3.4.7",
+    "buffer": "^5.0.2",
+    "commander": "^2.9.0",
+    "debug": "^2.6.0",
+    "fs-extra": "^1.0.0",
+    "jszip": "^3.1.3",
+    "promised-for": "^1.0.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.3.0",
+    "standard": "^8.6.0"
+  },
+  "scripts": {
+    "test": "standard",
+    "prepublish": "browserify example/browser.js > example/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshjv/zip-bomb.git"
+  },
+  "keywords": [
+    "zip",
+    "bomb"
+  ],
+  "author": "Harsh Vakharia <harshjv@gmail.com> (https://harshjv.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harshjv/zip-bomb/issues"
+  },
+  "homepage": "https://github.com/harshjv/zip-bomb#readme",
+  "standard": {
+    "ignore": [
+      "/example/bundle.js"
+    ]
+  }
+}

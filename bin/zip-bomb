@@ -1,0 +1,43 @@
+#!/usr/bin/env node
+
+const fs = require('fs')
+const path = require('path')
+const commander = require('commander')
+
+const pkg = require('../package.json')
+const filename = path.basename(__filename)
+
+commander
+  .version(pkg.version)
+  .option('-b, --zero-buffer-size <number>', 'Zero buffer size')
+  .option('-l, --buffer-level <number>', 'Buffer multiplier')
+  .option('-z, --zip-level <number>', 'Level')
+  .option('-o, --output <file>', 'Output file')
+
+commander.on('--help', function () {
+  console.log('  Example:')
+  console.log('')
+  console.log('    $ zip-bomb -b 10485760 -l 10 -z 50 -o zip-bomb.zip')
+  console.log('')
+})
+
+commander.parse(process.argv)
+
+const { zeroBufferSize, bufferLevel, zipLevel, output } = commander
+
+if (!zeroBufferSize || !bufferLevel || !zipLevel || !output) {
+  console.error(`Wrong usage. See ${filename} --help for help`)
+  process.exit(1)
+}
+
+const zb = require('../')
+
+zb.createBuffer(zeroBufferSize, bufferLevel, zipLevel)
+  .then((buffer) => {
+    fs.writeFile(output, buffer, (err) => {
+      if (err) throw err
+
+      console.log(`${output} is created`)
+    })
+  })
+  .catch((e) => console.error(e))
