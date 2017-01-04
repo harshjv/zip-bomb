@@ -9,7 +9,7 @@
 
 [Zip bomb](https://en.wikipedia.org/wiki/Zip_bomb) for Browser and Node.js.
 
-> [⚡️ Live demo here](https://cdn.rawgit.com/harshjv/zip-bomb/master/example/index.html)
+> [⚡️ Live demo here](https://rawgit.com/harshjv/zip-bomb/master/example/index.html)
 
 ## Installation
 
